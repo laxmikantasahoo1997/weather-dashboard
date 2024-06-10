@@ -17,16 +17,12 @@ const Home = () => {
   const { weatherDescription } = UseAppContext();
   const [backgroundVideoUrl, setBackgroundVideoUrl] = useState(sky);
 
-  // Debugging logs to check weatherDescription
   useEffect(() => {
     const videoUrl = getBackgroundVideo(weatherDescription);
     setBackgroundVideoUrl(videoUrl);
-    console.log("Weather Description: ", weatherDescription);
-    console.log("Background Video URL: ", videoUrl);
   }, [weatherDescription]);
 
 
-  // Determine background video based on weather description
   const getBackgroundVideo = (weatherDescription) => {
     const description = weatherDescription.toLowerCase();
     switch (true) {
