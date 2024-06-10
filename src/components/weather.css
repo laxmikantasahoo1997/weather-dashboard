@@ -1,0 +1,19 @@
+.weathercard{
+    background:transparent!important;
+    /* color: white; */
+}
+@media (max-width: 420px) {
+    .footer {
+        position: fixed!important;
+        bottom: 0 !important;
+        z-index: 111!important;
+    }
+}
+.weather-img{
+    height: 40px;
+    width: 40px;
+}
+
+  
+  
+  
