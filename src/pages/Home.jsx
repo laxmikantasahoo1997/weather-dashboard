@@ -15,7 +15,7 @@ import BgVideo from '../components/BgVideo';
 
 const Home = () => {
   const { weatherDescription } = UseAppContext();
-  const [backgroundVideoUrl, setBackgroundVideoUrl] = useState("");
+  const [backgroundVideoUrl, setBackgroundVideoUrl] = useState(sky);
 
   useEffect(() => {
     const videoUrl = getBackgroundVideo(weatherDescription);
