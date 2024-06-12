@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const BgVideo = ({backgroundVideoUrl}) => {
+  const videoRef = useRef();
+
+  useEffect(() => {    
+    videoRef.current?.load();
+  }, [backgroundVideoUrl]);
   return (
     <div>
         <video 
+        ref={videoRef}
             autoPlay 
             loop 
             muted 
@@ -15,7 +21,6 @@ const BgVideo = ({backgroundVideoUrl}) => {
               height: '100%',
               objectFit: 'cover',
               zIndex: -1,
-            //   filter: 'blur(5px)' // Optional: Add blur to the background video
             }}
           >
             <source src={backgroundVideoUrl} type="video/mp4" />
